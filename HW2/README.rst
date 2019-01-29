@@ -6,4 +6,4 @@ HW2: Hello Project
 :Started on: Jan 29, 2019
 :Submitted on:  Jan 29, 2019
 
-Homework 2. Hello Project.
+Homework 2. This project tells the user my name.
