@@ -70,7 +70,7 @@ Assuming electronic waves move through wire at the speed of light:
 
     * In one nanosecond = 11.8 inches
 
-    * In one microsecond = 1.01 feet (191,344.81 * 5280) * .000001
+    * In one microsecond = 9.8 x 10^-4 (0.00098) feet (11.8 / 1000 = .0118) / 12
 
     * In one millisecond = 191.34 miles (191,344.81 / 1000)
 
@@ -95,7 +95,7 @@ Dig out data for the Haswell Processor. Specifically, use this version:
 
     * Intel i7-7700, 7th Generation Pentium chip
 
-        * Manufacturing Process = 0.014 nm (http://www.cpu-world.com/CPUs/Core_i7/Intel-Core%20i7%20i7-7700.html)
+        * Manufacturing Process = 14 nm (0.014 microns * *1000)(http://www.cpu-world.com/CPUs/Core_i7/Intel-Core%20i7%20i7-7700.html)
 
         * Transistor Count = 2.16 billion transistors (https://www.quora.com/How-many-transistors-are-in-i3-i5-and-i7-processors)
 
