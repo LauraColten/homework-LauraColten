@@ -1,7 +1,7 @@
-..  include::  /images/fetch.jpg
-..  include::  /images/decode.jpg
-..  include::  /images/execute.jpg
-..  include::  /images/store.jpg
+..  include::  ./images/fetch.jpg
+..  include::  ./images/decode.jpg
+..  include::  ./images/execute.jpg
+..  include::  ./images/store.jpg
 
 Exam2: Major Tom's Counting Maching
 ##################
@@ -16,24 +16,24 @@ Unit Diagrams
 
 Fetch Unit
 ==========
-.. image:: ../images/fetch.jpg
+.. image:: ./images/fetch.jpg
    :align: center
    :width: 500
 
 Decode Unit
 ===========
-.. image:: ../images/decode.jpg
+.. image:: ./images/decode.jpg
    :align: center
    :width: 500
 
 Execute Unit
 ============
-.. image:: ../images/execute.jpg
+.. image:: ./images/execute.jpg
    :align: center
    :width: 500
 
 Store Unit
 ==========
-.. image:: ../images/store.jpg
+.. image:: ./images/store.jpg
    :align: center
    :width: 500
