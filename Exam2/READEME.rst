@@ -1,3 +1,8 @@
+..  include::  /images/fetch.jpg
+..  include::  /images/decode.jpg
+..  include::  /images/execute.jpg
+..  include::  /images/store.jpg
+
 Exam2: Major Tom's Counting Maching
 ##################
 :Author: Laura Colten
