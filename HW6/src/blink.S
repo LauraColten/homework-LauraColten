@@ -2,7 +2,7 @@
 ; Author: Roie R. Black and Laura Colten
 ; Date: April 10, 2019
 
-#include "config.h"
+#include "../include/config.h"
 
 	.section .data
 dummy: 	.byte 0		; dummy global variable
@@ -44,4 +44,21 @@ toggle:
         ldi         r25, (1 << LED_PIN)     ; LED is pin 5
         eor         r24, r25                ; flip the bit
         out         LED_PORT, r24           ; write the bits back
+        ret
+
+delay:
+        ldi      r26, 5
+1:
+
+        ldi      r27, 200
+2:
+
+        ldi      r28, 200
+3:
+        dec r28
+        brne 3b
+        dec r27
+        brne 2b
+        dec r26
+        brne 1b
         ret
