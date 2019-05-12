@@ -9,7 +9,7 @@ Exam2: Major Tom's Counting Maching
 :Course: COSC2325-004
 :Instructor: Roie R. Black
 :Started on: April 22, 2019
-:Submitted on:
+:Submitted on: May 12, 2019
 
 Problem Statement
 #################
@@ -17,6 +17,7 @@ Problem Statement
 Based on the limited number of parts found on his ship, Major Tom needs to contruct a VERY simple machine that can produce to the answers simple math
 problems.
 Requirements:
+
 - IN and OUT registers have simple connections to the keyboard and display.
 - IN register is not driven by a clock.
 - The machine triggers into action when the user presses a key.
@@ -183,5 +184,6 @@ Design Review
 #############
 
 Machine Improvements:
--The machine could be improved by changing the code to accept multi-digit inputs.
--It could be improved with a dynamically increasing/decreasing number of inputs.
+
+- The machine could be improved by changing the code to accept multi-digit inputs.
+- It could be improved with a dynamically increasing/decreasing number of inputs.
