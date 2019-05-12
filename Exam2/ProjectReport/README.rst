@@ -14,7 +14,7 @@ Exam2: Major Tom's Counting Maching
 Problem Statement
 #################
 
-Based on the limited number of parts found on his ship, Major Tom needs to contruct a VERY simple machine that can produce to the answers simple math
+Based on the limited number of parts found on his ship, Major Tom needs to contruct a VERY simple machine that can produce the answers to simple math
 problems.
 Requirements:
 
