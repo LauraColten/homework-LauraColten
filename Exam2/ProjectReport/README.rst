@@ -17,11 +17,11 @@ Problem Statement
 Based on the limited number of parts found on his ship, Major Tom needs to contruct a VERY simple machine that can produce to the answers simple math
 problems.
 Requirements:
--IN and OUT registers have simple connections to the keyboard and display.
--IN register is not driven by a clock.
--The machine triggers into action when the user presses a key.
--The machine can only handle one-digit inputs.
--The machine will toggle from ADD to SUB.
+- IN and OUT registers have simple connections to the keyboard and display.
+- IN register is not driven by a clock.
+- The machine triggers into action when the user presses a key.
+- The machine can only handle one-digit inputs.
+- The machine will toggle from ADD to SUB.
 
 Code
 ####
@@ -111,43 +111,43 @@ AVR - RTL code
 
 .. code-block:: cpp
 
-        LDI   r2, 0   ;reset the count
-        LDI   r3, 0   ;1 means sub, 0 means ADD
-        ;
-start:  OUT   LCD, r2 ;display current count
-        ;get operation key from user
-        IN    r1, KEY ;get user key
-        CPI   r1, '+' ;plus?
-        BRNE  chksub  ;branch if not equal
-        LDI   r3, 0   ;set op to ADD
-        JMP   digit   ;get the digit to ADD
-chksub: CPI   r1, '-' ;minus?
-        BRNE  start   ;illegal op to sub
-        LDI   r3, 1   ;set op to sub
-        : get the digit to process
-        IN    rl, KEY ;test digit to char
-digit:  CPI   r1, 0   ;test for zero
-        BREQ  start   ;branch if zero
-        CPI   r2, 0   ;do we add?
-        BREQ  dosub   ;jump if not
-doadd:  INC   r2      ;count up
-        DEC   r1      ;count key down
-        JMP   digit   ;keep going
-dosub:  DEC   r2      ;count down
-        DEC   r1      ;count key down
-        JMP   digit   ;keep going
+            LDI   r2, 0   ;reset the count
+            LDI   r3, 0   ;1 means sub, 0 means ADD
+            ;
+    start:  OUT   LCD, r2 ;display current count
+            ;get operation key from user
+            IN    r1, KEY ;get user key
+            CPI   r1, '+' ;plus?
+            BRNE  chksub  ;branch if not equal
+            LDI   r3, 0   ;set op to ADD
+            JMP   digit   ;get the digit to ADD
+    chksub: CPI   r1, '-' ;minus?
+            BRNE  start   ;illegal op to sub
+            LDI   r3, 1   ;set op to sub
+            : get the digit to process
+            IN    rl, KEY ;test digit to char
+    digit:  CPI   r1, 0   ;test for zero
+            BREQ  start   ;branch if zero
+            CPI   r2, 0   ;do we add?
+            BREQ  dosub   ;jump if not
+    doadd:  INC   r2      ;count up
+            DEC   r1      ;count key down
+            JMP   digit   ;keep going
+    dosub:  DEC   r2      ;count down
+            DEC   r1      ;count key down
+            JMP   digit   ;keep going
 
 
-KEY <- r1
-r3 <- 0
-KEY <- r1, r3
-r3 <- 0
-KEY <- r1, r3
-r3 <- 0
-KEY <- r1, r3
-r3 <- 1
-KEY < r1, r3
-r2 <- KEY
+    KEY <- r1
+    r3 <- 0
+    KEY <- r1, r3
+    r3 <- 0
+    KEY <- r1, r3
+    r3 <- 0
+    KEY <- r1, r3
+    r3 <- 1
+    KEY < r1, r3
+    r2 <- KEY
 
 
 
