@@ -1,18 +1,25 @@
+//Author: Roie Black and Laura Colten
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define CLOCK_PRESCALE(n)   (CLKPR = 0x80, CLKPR = (n))
-#define BUZZER_CONFIG       (DDRB |= (1<<4))
-#define BUZZ_ON             (PORTD |= (1<<7))
-#define BUZZ_OFF            (PORTD &= ~(1<<7))
+// Buzzer is pin 4 on UNO
+#define BUZZ_PIN         4
+#define BUZZ_ON          (PORTB |= (1<<BUZZ_PIN))
+#define BUZZ_OFF         (PORTB &= ~(1<<BUZZ_PIN))
 
-int main(void){
-    CLOCK_PRESCALE(0);
-    BUZZER_CONFIG;
-    while(1) {
+#define BUZZ_CONFIG      (DDRB |= (1<<BUZZ_PIN))
+#define CPU_PRESCALE(n) (CLKPR = 0x80, CLKPR = (n))
+
+int main(void) {
+
+    CPU_PRESCALE(0);
+    BUZZ_CONFIG;
+    BUZZ_OFF;
+
+    while(1){
         BUZZ_ON;
-        _delay_us(200);
+        _delay_ms(2);
         BUZZ_OFF;
-        _delay_us(200);
+        _delay_ms(2);
     }
 }
