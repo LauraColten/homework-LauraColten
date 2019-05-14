@@ -139,13 +139,16 @@ AVR - RTL code
             JMP   digit   ;keep going
 
 
-    KEY <- r1
+    r1 <- KEY
     r3 <- 0
-    KEY <- r1, r3
+    r1, r3 <- KEY
+    r1 <- KEY
     r3 <- 0
-    KEY <- r1, r3
+    r1, r3 <- KEY
+    r1 <- KEY
     r3 <- 0
-    KEY <- r1, r3
+    r1, r3 <- KEY
+    r1 <- KEY
     r3 <- 1
     KEY < r1, r3
     r2 <- KEY
