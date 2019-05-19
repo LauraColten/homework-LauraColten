@@ -5,4 +5,5 @@ HW7: Instruction Tracing
 :Instructor: Roie R. Black
 :Submitted on:  May 06, 2019
 
+.. image:: ./img/LD_sketch.jpg
 .. image:: ./img/CPSE.jpg
